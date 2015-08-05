@@ -1,8 +1,9 @@
-var timer = null
+var timer = null;
 var mesh;
-var balls = []
+var balls = [];
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight, 1,10000);
+var helpers = require('./helpers');
 
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -31,6 +32,9 @@ function render() {
   timer = Date.now()/1000 // increments 1 per second
   // console.log(timer)
 
+
+  // TODO: calulate and plot xy coordinates
+  var
 
 renderer.render(scene, camera);
 }
