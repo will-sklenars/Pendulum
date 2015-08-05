@@ -1,0 +1,23 @@
+{
+  "name": "Pendulum",
+  "version": "0.0.0",
+  "description": "",
+  "main": "<application class="js"></application>",
+  "dependencies": {
+    "browserify": "^11.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/SkwynethPaltrow/Pendulum.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SkwynethPaltrow/Pendulum/issues"
+  },
+  "homepage": "https://github.com/SkwynethPaltrow/Pendulum"
+}
