@@ -3,13 +3,16 @@ var THREE = require('./js/three.min.js');
 
 var orbitControl = require('./js/orbitControls');
 var helpers = require('./js/helpers');
+var Pendulum = require('./js/pendulum');
 
-var timer = null;
 var mesh;
 var balls = [];
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight, 1,10000);
 
+// Add axis helper to show axis in x (red) and y (green) z (blue) direction, remove later
+var axisHelper = new THREE.AxisHelper( 10000 );
+scene.add( axisHelper );
 
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -28,15 +31,25 @@ for (var i = 0; i < 1; i++) {
   balls.push(mesh)
   scene.add( mesh );
 
+
 };
 
 camera.position.z = 2000;
 
+var pendulums = [
+  new Pendulum({
+    length: 1,
+    z: 0,
+
+  })
+]
 
 function render() {
   requestAnimationFrame(render);
-  timer = Date.now()/1000 // increments 1 per second
-  // console.log(timer)
+  var time = Date.now()/1000 // increments 1/second
+  pendulums.forEach(function (pendulum) {
+    pendulum.update(time)
+  })
 
 
   // TODO: calulate and plot xy coordinates
