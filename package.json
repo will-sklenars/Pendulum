@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/SkwynethPaltrow/Pendulum/issues"
   },
-  "homepage": "https://github.com/nodeschool/wellington",
+  "homepage": "https://github.com/SkwynethPaltrow/Pendulum",
   "dependencies": {
     "normalize-css": "^2.3.1"
   },
