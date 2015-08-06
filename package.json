@@ -2,22 +2,38 @@
   "name": "Pendulum",
   "version": "0.0.0",
   "description": "",
-  "main": "<application class="js"></application>",
-  "dependencies": {
-    "browserify": "^11.0.1"
-  },
-  "devDependencies": {},
+  "main": "application.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "budo application.js -o /js/bundle.js --live",
+    "build": "browserify application.js -o /js/bundle.js -g uglifyify",
+    "test": "run-browser test/* -b",
+    "deploy": "npm run build ."
+  },
+  "browserify": {
+    "transform": []
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/SkwynethPaltrow/Pendulum.git"
   },
-  "author": "",
+  "contributors": [
+    "ashlynbaum",
+    "will"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/SkwynethPaltrow/Pendulum/issues"
   },
-  "homepage": "https://github.com/SkwynethPaltrow/Pendulum"
+  "homepage": "https://github.com/nodeschool/wellington",
+  "dependencies": {
+    "normalize-css": "^2.3.1"
+  },
+  "devDependencies": {
+    "browserify": "^9.0.7",
+    "budo": "^2.1.3",
+    "run-browser": "^2.0.2",
+    "tape": "^4.0.0",
+    "uglifyify": "^3.0.1",
+    "watchify": "^3.1.0"
+  }
 }

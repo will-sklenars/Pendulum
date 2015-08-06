@@ -1,9 +1,15 @@
+// require('normalize-css');
+var THREE = require('./js/three.min.js');
+
+var orbitControl = require('./js/orbitControls');
+var helpers = require('./js/helpers');
+
 var timer = null;
 var mesh;
 var balls = [];
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight, 1,10000);
-var helpers = require('./helpers');
+
 
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -34,7 +40,8 @@ function render() {
 
 
   // TODO: calulate and plot xy coordinates
-  var
+
+
 
 renderer.render(scene, camera);
 }
