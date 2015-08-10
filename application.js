@@ -1,8 +1,15 @@
-var timer = null
+// require('normalize-css');
+var THREE = require('./js/three.min.js');
+
+var orbitControl = require('./js/orbitControls');
+var helpers = require('./js/helpers');
+
+var timer = null;
 var mesh;
-var balls = []
+var balls = [];
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight, 1,10000);
+
 
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -30,6 +37,10 @@ function render() {
   requestAnimationFrame(render);
   timer = Date.now()/1000 // increments 1 per second
   // console.log(timer)
+
+
+  // TODO: calulate and plot xy coordinates
+
 
 
 renderer.render(scene, camera);

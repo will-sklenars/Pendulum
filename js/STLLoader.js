@@ -1,3 +1,4 @@
+var THREE = require('./three.min.js');
 /**
  * @author aleeper / http://adamleeper.com/
  * @author mrdoob / http://mrdoob.com/
